@@ -4,6 +4,6 @@ echo "[*] Usage $0 domain.com "
 exit 0
 fi
 
-for i in $(host -t ns $1 |cut -d" " -f4 );do 
+for i in $(host -t ns $1 |cut -d" " -f4 | cut -d"." -f1,2,3 );do 
 host -l $1 $i | grep "has address"
 done
