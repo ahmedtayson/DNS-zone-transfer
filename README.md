@@ -10,4 +10,4 @@ DNS zone transfer
 
 #chmod +x zone
 
-#./iphost domin
+#./zone domin
